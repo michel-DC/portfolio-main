@@ -1,5 +1,6 @@
 import { HeroSection } from "@/components/sections/hero-section";
 import { SkillsSection } from "@/components/sections/skills-section";
+import { EducationSection } from "@/components/sections/edu-section";
 import { WorksSection } from "@/components/sections/works-section";
 import { BlogSection } from "@/components/sections/blog-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
@@ -11,6 +12,9 @@ export function LandingPage() {
       <HeroSection />
       <div id="skills">
         <SkillsSection />
+      </div>
+      <div id="education">
+        <EducationSection />
       </div>
       <div id="works">
         <WorksSection />

@@ -1,42 +1,33 @@
 import Section from "@/components/section";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { BriefcaseBusiness, Building } from "lucide-react";
+import { GraduationCap } from "lucide-react";
 
-const experiences = [
+const education = [
   {
-    company: "Bumps Agency",
-    url: "https://www.bumps-agency.ch/",
-    title: "Développeur Fullstack en Freelance",
-    period: "Juillet 2025 - Aujourd'hui",
+    school: "Université de Versailles Saint Quentin en Yvelines",
+    url: "https://www.iut-velizy-rambouillet.uvsq.fr/",
+    title: "Étudiant en BUT MMI",
+    period: "2024 - Aujourd'hui",
     description:
-      "Développement web principalement en React, TypeScript et Next.js pour plusieurs entreprises. Intégration d'IA via les assistants OpenAI et Perplexity via des fonctions serverless supabase. Réalisation d'intégrations front-end à partir de maquettes Figma.",
-    icon: BriefcaseBusiness,
-  },
-  {
-    company: "Lookaroun",
-    url: "https://lookaroun.com",
-    title: "Stage de 1ère année",
-    period: "Juin 2025 - Aout 2025",
-    description:
-      "Intégration des maquettes Figma en React pour Lookaroun, création d’interfaces dynamiques via les API back-end, avec optimisation SEO, performances et responsive design soignés.",
-    icon: Building,
+      "Formation en Métiers du Multimédia et de l'Internet. Projets universitaires orientés développement (fullstack, IA, UX/UI), mais aussi graphisme, 3D et communication.",
+    icon: GraduationCap,
   },
 ];
 
-export function WorksSection() {
+export function EducationSection() {
   return (
     <Section className="flex flex-col items-start justify-center pt-8 pb-8 px-4 sm:px-8">
       <div className="w-full flex flex-col justify-center">
         <h2 className="text-foreground/80 italic text-[25px] sm:text-[30px] leading-tight font-normal tracking-wider mb-2">
-          Mes expériences professionnelles
+          Mes formations
         </h2>
         <div className="ml-2">
           <ul className="list-disc pl-2 flex flex-col gap-6 pt-2 w-full">
-            {experiences.map((exp) => {
+            {education.map((exp) => {
               const Icon = exp.icon;
               return (
-                <li key={exp.company} className="relative w-full">
+                <li key={exp.school} className="relative w-full">
                   <div className="flex items-center gap-2 w-full sm:w-auto">
                     {/* Desktop+: affiche le bouton avec l'icône */}
                     <div className="hidden sm:block">
@@ -49,7 +40,7 @@ export function WorksSection() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 group hover:text-foreground transition-colors"
-                          aria-label={exp.company}
+                          aria-label={exp.school}
                         >
                           <Icon className="w-4 h-4 text-foreground" />
                         </Link>
@@ -70,12 +61,10 @@ export function WorksSection() {
                         >
                           {/* Sur mobile, applique title=URL */}
                           <span className="sm:hidden" title={exp.url}>
-                            {exp.company}
+                            {exp.school}
                           </span>
                           {/* Desktop+, pas de title */}
-                          <span className="hidden sm:inline">
-                            {exp.company}
-                          </span>
+                          <span className="hidden sm:inline">{exp.school}</span>
                         </span>
                         <span className="hidden sm:inline text-xs text-foreground/60 mx-2">
                           |
