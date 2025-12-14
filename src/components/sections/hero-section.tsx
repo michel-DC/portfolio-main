@@ -3,7 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, BriefcaseBusiness } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  BriefcaseBusiness,
+  FileText,
+} from "lucide-react";
 import Section from "@/components/section";
 import { motion } from "framer-motion";
 
@@ -169,6 +175,23 @@ export function HeroSection() {
                 </Link>
               </Button>
             </motion.div>
+            {/* CV */}
+            <motion.div variants={buttonVariants}>
+              <Button
+                asChild
+                size="sm"
+                className="text-foreground font-semibold gap-1 px-5 py-0.5 shadow text-[12px]"
+              >
+                <Link
+                  href="/documents/CV-MICHEL-DJOUMESSI.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FileText className="size-4 text-foreground" />
+                  <span className="text-foreground">CV</span>
+                </Link>
+              </Button>
+            </motion.div>
             {/* <Button
               asChild
               size="sm"
@@ -249,6 +272,22 @@ export function HeroSection() {
               >
                 <BriefcaseBusiness className="size-3 text-foreground" />
                 <span className="text-foreground">Malt</span>
+              </Link>
+            </Button>
+          </motion.div>
+          {/* CV */}
+          <motion.div variants={buttonVariants}>
+            <Button
+              asChild
+              className="text-foreground font-semibold gap-1 px-2.5 py-0.5 shadow text-[12px]"
+            >
+              <Link
+                href="/documents/CV-MICHEL-DJOUMESSI.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FileText className="size-3 text-foreground" />
+                <span className="text-foreground">CV</span>
               </Link>
             </Button>
           </motion.div>
