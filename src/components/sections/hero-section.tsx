@@ -183,7 +183,7 @@ export function HeroSection() {
                 className="text-foreground font-semibold gap-1 px-5 py-0.5 shadow text-[12px]"
               >
                 <Link
-                  href="/documents/CV-MICHEL-DJOUMESSI.pdf"
+                  href="/documents/CV-MICHEL.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -282,7 +282,7 @@ export function HeroSection() {
               className="text-foreground font-semibold gap-1 px-2.5 py-0.5 shadow text-[12px]"
             >
               <Link
-                href="/documents/CV-MICHEL-DJOUMESSI.pdf"
+                href="/documents/CV-MICHEL.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
